@@ -1,0 +1,156 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/devops-project
+The recommended git tool is: NONE
+using credential 8d280139-a8dd-44ed-9db7-e831983e6e09
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/devops-project/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://DevOpsOrganizationProject@dev.azure.com/DevOpsOrganizationProject/DevOps%20Project/_git/DevOps%20Project # timeout=10
+Fetching upstream changes from https://DevOpsOrganizationProject@dev.azure.com/DevOpsOrganizationProject/DevOps%20Project/_git/DevOps%20Project
+ > git --version # timeout=10
+ > git --version # 'git version 2.20.1'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://DevOpsOrganizationProject@dev.azure.com/DevOpsOrganizationProject/DevOps%20Project/_git/DevOps%20Project +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 35ae68c55df6f884dbf69d0bbe7788b7313a876b (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 35ae68c55df6f884dbf69d0bbe7788b7313a876b # timeout=10
+Commit message: "Set up CI with Azure Pipelines"
+ > git rev-list --no-walk 35ae68c55df6f884dbf69d0bbe7788b7313a876b # timeout=10
+Parsing POMs
+Established TCP socket on 40653
+[devops-project] $ java -cp /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven35-agent-1.13.jar:/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/maven38/boot/plexus-classworlds-2.6.0.jar:/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/maven38/conf/logging jenkins.maven3.agent.Maven35Main /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/maven38 /var/jenkins_home/war/WEB-INF/lib/remoting-4.7.jar /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.13.jar 40653
+<===[JENKINS REMOTING CAPACITY]===>channel started
+Executing Maven:  -B -f /var/jenkins_home/workspace/devops-project/pom.xml package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< com.applaudostudios.interview:api-challenge >-------------
+[INFO] Building API Challenge 1.4.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ api-challenge ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ api-challenge ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ api-challenge ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/devops-project/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ api-challenge ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ api-challenge ---
+[INFO] No tests to run.
+[JENKINS] Recording test results
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ api-challenge ---
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.4.0:repackage (repackage) @ api-challenge ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.394 s
+[INFO] Finished at: 2021-08-17T13:42:23Z
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving /var/jenkins_home/workspace/devops-project/pom.xml to com.applaudostudios.interview/api-challenge/1.4.0/api-challenge-1.4.0.pom
+[JENKINS] Archiving /var/jenkins_home/workspace/devops-project/target/api-challenge-1.4.0.jar to com.applaudostudios.interview/api-challenge/1.4.0/api-challenge-1.4.0.jar
+channel stopped
+[devops-project] $ /var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/Scanner/bin/sonar-scanner scan -Dsonar.host.url=http://172.19.0.2:9000 -Dsonar.projectKey=devops-project -Dsonar.language=java -Dsonar.login=d3fdab433cf44aefa0641e5a9cf2eb125a3494af -Dsonar.exclusions=**/*.java -Dsonar.projectBaseDir=/var/jenkins_home/workspace/devops-project
+INFO: Scanner configuration file: /var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/Scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: SonarScanner 4.6.2.2472
+INFO: Java 11.0.11 AdoptOpenJDK (64-bit)
+INFO: Linux 4.19.128-microsoft-standard amd64
+INFO: User cache: /var/jenkins_home/.sonar/cache
+INFO: Scanner configuration file: /var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/Scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: Analyzing on SonarQube server 9.0.1
+INFO: Default locale: "en_US", source code encoding: "UTF-8" (analysis is platform dependent)
+INFO: Load global settings
+INFO: Load global settings (done) | time=69ms
+INFO: Server id: BF41A1F2-AXtUQBAuZcwe-mxKKIbx
+INFO: User cache: /var/jenkins_home/.sonar/cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=42ms
+INFO: Load/download plugins (done) | time=132ms
+INFO: Process project properties
+INFO: Process project properties (done) | time=1ms
+INFO: Execute project builders
+INFO: Execute project builders (done) | time=2ms
+INFO: Project key: devops-project
+INFO: Base dir: /var/jenkins_home/workspace/devops-project
+INFO: Working dir: /var/jenkins_home/workspace/devops-project/.scannerwork
+INFO: Load project settings for component key: 'devops-project'
+INFO: Load project settings for component key: 'devops-project' (done) | time=21ms
+INFO: Auto-configuring with CI 'Jenkins'
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=60ms
+INFO: Auto-configuring with CI 'Jenkins'
+INFO: Load active rules
+INFO: Load active rules (done) | time=1535ms
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Excluded sources: **/*.java
+INFO: 6 files indexed
+INFO: 17 files ignored because of inclusion/exclusion patterns
+INFO: 25 files ignored because of scm ignore settings
+INFO: Quality profile for xml: Sonar way
+INFO: ------------- Run sensors on module devops-project
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=26ms
+INFO: Sensor CSS Rules [cssfamily]
+INFO: No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+INFO: Sensor CSS Rules [cssfamily] (done) | time=1ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=3ms
+INFO: Sensor C# Project Type Information [csharp]
+INFO: Sensor C# Project Type Information [csharp] (done) | time=1ms
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=1ms
+INFO: Sensor JavaXmlSensor [java]
+INFO: 2 source files to be analyzed
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=17ms
+INFO: 2/2 source files have been analyzed
+INFO: Sensor JavaXmlSensor [java] (done) | time=262ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=3ms
+INFO: Sensor XML Sensor [xml]
+INFO: 2 source files to be analyzed
+INFO: 2/2 source files have been analyzed
+INFO: Sensor XML Sensor [xml] (done) | time=230ms
+INFO: Sensor VB.NET Project Type Information [vbnet]
+INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=1ms
+INFO: Sensor VB.NET Properties [vbnet]
+INFO: Sensor VB.NET Properties [vbnet] (done) | time=2ms
+INFO: ------------- Run sensors on project
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=1ms
+INFO: CPD Executor Calculating CPD for 0 files
+INFO: CPD Executor CPD calculation finished (done) | time=1ms
+INFO: Analysis report generated in 79ms, dir size=106.9 kB
+INFO: Analysis report compressed in 20ms, zip size=16.4 kB
+INFO: Analysis report uploaded in 20ms
+INFO: ANALYSIS SUCCESSFUL, you can browse http://172.19.0.2:9000/dashboard?id=devops-project
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at http://172.19.0.2:9000/api/ce/task?id=AXtUWWKAZcwe-mxKKNSB
+INFO: Analysis total time: 4.096 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 5.241s
+INFO: Final Memory: 12M/60M
+INFO: ------------------------------------------------------------------------
+Archiving artifacts
+Finished: SUCCESS

@@ -1,0 +1,305 @@
+2021-08-17T13:39:53.4872914Z ##[section]Starting: Job
+2021-08-17T13:39:53.9101542Z ##[section]Starting: Initialize job
+2021-08-17T13:39:53.9103255Z Agent name: 'JUANJO'
+2021-08-17T13:39:53.9103518Z Agent machine name: 'JUANJO'
+2021-08-17T13:39:53.9103693Z Current agent version: '2.190.0'
+2021-08-17T13:39:53.9124068Z Agent running as: 'JJ'
+2021-08-17T13:39:53.9154895Z Prepare build directory.
+2021-08-17T13:39:53.9438346Z Set build variables.
+2021-08-17T13:39:53.9465988Z Download all required tasks.
+2021-08-17T13:39:53.9559324Z Downloading task: CmdLine (2.182.0)
+2021-08-17T13:39:55.7537412Z Downloading task: JenkinsQueueJob (2.189.0)
+2021-08-17T13:39:58.1116449Z Checking job knob settings.
+2021-08-17T13:39:58.1137066Z    Knob: TaskRestrictionsEnforcementMode = Enabled Source: $(agent.taskRestrictionsEnforcementMode) 
+2021-08-17T13:39:58.1138354Z    Knob: EnableTaskRestrictionsTelemetry = true Source: $(agent.enableTaskRestrictionsTelemetry) 
+2021-08-17T13:39:58.1141474Z Finished checking job knob settings.
+2021-08-17T13:39:58.1850113Z Start tracking orphan processes.
+2021-08-17T13:39:58.1968343Z ##[section]Finishing: Initialize job
+2021-08-17T13:39:58.2284109Z ##[section]Starting: Checkout DevOps Project@master to s
+2021-08-17T13:39:58.2787520Z ==============================================================================
+2021-08-17T13:39:58.2788037Z Task         : Get sources
+2021-08-17T13:39:58.2788449Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2021-08-17T13:39:58.2788681Z Version      : 1.0.0
+2021-08-17T13:39:58.2789001Z Author       : Microsoft
+2021-08-17T13:39:58.2789489Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2021-08-17T13:39:58.2789775Z ==============================================================================
+2021-08-17T13:39:58.9124804Z Syncing repository: DevOps Project (Git)
+2021-08-17T13:39:58.9213592Z Prepending Path environment variable with directory containing 'git.exe'.
+2021-08-17T13:39:58.9250471Z ##[command]git version
+2021-08-17T13:39:59.1592077Z git version 2.30.2.windows.1
+2021-08-17T13:39:59.1610508Z ##[command]git lfs version
+2021-08-17T13:39:59.5580197Z git-lfs/2.13.3 (GitHub; windows amd64; go 1.16.2; git a5e65851)
+2021-08-17T13:39:59.5764058Z ##[command]git init "C:\agent\a1\_work\1\s"
+2021-08-17T13:39:59.7748349Z hint: Using 'master' as the name for the initial branch. This default branch name
+2021-08-17T13:39:59.7750789Z Initialized empty Git repository in C:/agent/a1/_work/1/s/.git/
+2021-08-17T13:39:59.7752816Z hint: is subject to change. To configure the initial branch name to use in all
+2021-08-17T13:39:59.7754539Z hint: of your new repositories, which will suppress this warning, call:
+2021-08-17T13:39:59.7755781Z hint: 
+2021-08-17T13:39:59.7756955Z hint: 	git config --global init.defaultBranch <name>
+2021-08-17T13:39:59.7757949Z hint: 
+2021-08-17T13:39:59.7760159Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2021-08-17T13:39:59.7761994Z hint: 'development'. The just-created branch can be renamed via this command:
+2021-08-17T13:39:59.7763469Z hint: 
+2021-08-17T13:39:59.7764852Z hint: 	git branch -m <name>
+2021-08-17T13:39:59.7833618Z ##[command]git remote add origin https://DevOpsOrganizationProject@dev.azure.com/DevOpsOrganizationProject/DevOps%AZP2520Project/_git/DevOps%AZP2520Project
+2021-08-17T13:39:59.8426210Z ##[command]git config gc.auto 0
+2021-08-17T13:39:59.9012390Z ##[command]git config --get-all http.https://DevOpsOrganizationProject@dev.azure.com/DevOpsOrganizationProject/DevOps%AZP2520Project/_git/DevOps%AZP2520Project.extraheader
+2021-08-17T13:39:59.9637948Z ##[command]git config --get-all http.proxy
+2021-08-17T13:40:00.0247377Z ##[command]git config http.version HTTP/1.1
+2021-08-17T13:40:00.0821989Z ##[command]git -c http.extraheader="AUTHORIZATION: bearer ***" fetch --force --tags --prune --progress --no-recurse-submodules origin
+2021-08-17T13:40:00.8483447Z remote: Azure Repos        
+2021-08-17T13:40:00.8930446Z remote: 
+2021-08-17T13:40:00.8931940Z remote: Found 42 objects to send. (46 ms)        
+2021-08-17T13:40:01.2150067Z From https://dev.azure.com/DevOpsOrganizationProject/DevOps%20Project/_git/DevOps%20Project
+2021-08-17T13:40:01.2150968Z  * [new branch]      master     -> origin/master
+2021-08-17T13:40:01.2808433Z ##[command]git -c http.extraheader="AUTHORIZATION: bearer ***" fetch --force --tags --prune --progress --no-recurse-submodules origin +35ae68c55df6f884dbf69d0bbe7788b7313a876b
+2021-08-17T13:40:01.7537908Z From https://dev.azure.com/DevOpsOrganizationProject/DevOps%20Project/_git/DevOps%20Project
+2021-08-17T13:40:01.7538850Z  * branch            35ae68c55df6f884dbf69d0bbe7788b7313a876b -> FETCH_HEAD
+2021-08-17T13:40:01.8083365Z ##[command]git checkout --progress --force 35ae68c55df6f884dbf69d0bbe7788b7313a876b
+2021-08-17T13:40:01.9239437Z Note: switching to '35ae68c55df6f884dbf69d0bbe7788b7313a876b'.
+2021-08-17T13:40:01.9239720Z 
+2021-08-17T13:40:01.9240084Z You are in 'detached HEAD' state. You can look around, make experimental
+2021-08-17T13:40:01.9241745Z changes and commit them, and you can discard any commits you make in this
+2021-08-17T13:40:01.9242457Z state without impacting any branches by switching back to a branch.
+2021-08-17T13:40:01.9242797Z 
+2021-08-17T13:40:01.9243354Z If you want to create a new branch to retain commits you create, you may
+2021-08-17T13:40:01.9243922Z do so (now or later) by using -c with the switch command. Example:
+2021-08-17T13:40:01.9244426Z 
+2021-08-17T13:40:01.9244851Z   git switch -c <new-branch-name>
+2021-08-17T13:40:01.9244948Z 
+2021-08-17T13:40:01.9245151Z Or undo this operation with:
+2021-08-17T13:40:01.9245364Z 
+2021-08-17T13:40:01.9245710Z   git switch -
+2021-08-17T13:40:01.9245811Z 
+2021-08-17T13:40:01.9246185Z Turn off this advice by setting config variable advice.detachedHead to false
+2021-08-17T13:40:01.9246322Z 
+2021-08-17T13:40:01.9246498Z HEAD is now at 35ae68c Set up CI with Azure Pipelines
+2021-08-17T13:40:01.9393140Z ##[section]Finishing: Checkout DevOps Project@master to s
+2021-08-17T13:40:01.9416877Z ##[section]Starting: Run a one-line script
+2021-08-17T13:40:01.9538040Z ==============================================================================
+2021-08-17T13:40:01.9538319Z Task         : Command line
+2021-08-17T13:40:01.9538594Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2021-08-17T13:40:01.9538843Z Version      : 2.182.0
+2021-08-17T13:40:01.9539047Z Author       : Microsoft Corporation
+2021-08-17T13:40:01.9539416Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2021-08-17T13:40:01.9539739Z ==============================================================================
+2021-08-17T13:40:03.0320411Z Generating script.
+2021-08-17T13:40:03.0410888Z Script contents:
+2021-08-17T13:40:03.0417277Z echo Hello, world!
+2021-08-17T13:40:03.1129520Z ========================== Starting Command Output ===========================
+2021-08-17T13:40:03.1319174Z ##[command]"C:\WINDOWS\system32\cmd.exe" /D /E:ON /V:OFF /S /C "CALL "C:\agent\a1\_work\_temp\07e18878-8a06-4719-83e6-7828b8172dea.cmd""
+2021-08-17T13:40:03.1516588Z Hello, world!
+2021-08-17T13:40:03.1849962Z ##[section]Finishing: Run a one-line script
+2021-08-17T13:40:03.1867723Z ##[section]Starting: JenkinsQueueJob
+2021-08-17T13:40:03.1977105Z ==============================================================================
+2021-08-17T13:40:03.1977322Z Task         : Jenkins queue job
+2021-08-17T13:40:03.1977494Z Description  : Queue a job on a Jenkins server
+2021-08-17T13:40:03.1977644Z Version      : 2.189.0
+2021-08-17T13:40:03.1977785Z Author       : Microsoft
+2021-08-17T13:40:03.1977997Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/build/jenkins-queue-job
+2021-08-17T13:40:03.1978240Z ==============================================================================
+2021-08-17T13:40:03.9999892Z Install the "Team Foundation Server Plug-in" for improved Jenkins integration
+2021-08-17T13:40:04.0001169Z http://localhost:8080/pluginManager/available
+2021-08-17T13:40:04.0111583Z Jenkins job queued
+2021-08-17T13:40:04.0715916Z Jenkins job pending: http://localhost:8080/job/devops-project/3
+2021-08-17T13:40:04.1520196Z ******************************************************************************
+2021-08-17T13:40:04.1520698Z Jenkins job started: devops-project
+2021-08-17T13:40:04.1521054Z http://localhost:8080/job/devops-project/3 
+2021-08-17T13:40:04.1521389Z ******************************************************************************
+2021-08-17T13:40:04.1636169Z Started by user ***
+2021-08-17T13:40:04.1636474Z Running as SYSTEM
+2021-08-17T13:40:04.1636730Z Building in workspace /var/jenkins_home/workspace/devops-project
+2021-08-17T13:40:04.1637038Z The recommended git tool is: NONE
+2021-08-17T13:40:04.1637396Z using credential 8d280139-a8dd-44ed-9db7-e831983e6e09
+2021-08-17T13:40:04.1637732Z  > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/devops-project/.git # timeout=10
+2021-08-17T13:40:04.1638391Z Fetching changes from the remote Git repository
+2021-08-17T13:40:04.1638882Z  > git config remote.origin.url https://DevOpsOrganizationProject@dev.azure.com/DevOpsOrganizationProject/DevOps%20Project/_git/DevOps%20Project # timeout=10
+2021-08-17T13:40:04.1639585Z Fetching upstream changes from https://DevOpsOrganizationProject@dev.azure.com/DevOpsOrganizationProject/DevOps%20Project/_git/DevOps%20Project
+2021-08-17T13:40:04.1640003Z  > git --version # timeout=10
+2021-08-17T13:40:04.1640282Z  > git --version # 'git version 2.20.1'
+2021-08-17T13:40:04.1640536Z using GIT_ASKPASS to set credentials 
+2021-08-17T13:40:04.1641220Z  > git fetch --tags --force --progress -- https://DevOpsOrganizationProject@dev.azure.com/DevOpsOrganizationProject/DevOps%20Project/_git/DevOps%20Project +refs/heads/*:refs/remotes/origin/* # timeout=10
+2021-08-17T13:40:04.1641848Z 
+2021-08-17T13:40:09.2724618Z  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+2021-08-17T13:40:09.2725537Z Checking out Revision 35ae68c55df6f884dbf69d0bbe7788b7313a876b (refs/remotes/origin/master)
+2021-08-17T13:40:09.2725862Z  > git config core.sparsecheckout # timeout=10
+2021-08-17T13:40:09.2726132Z  > git checkout -f 35ae68c55df6f884dbf69d0bbe7788b7313a876b # timeout=10
+2021-08-17T13:40:09.2726572Z Commit message: "Set up CI with Azure Pipelines"
+2021-08-17T13:40:09.2727095Z  > git rev-list --no-walk 7b36a99232341eac0b20097505594e1fce561ec8 # timeout=10
+2021-08-17T13:40:09.2727334Z Parsing POMs
+2021-08-17T13:40:09.2727505Z Established TCP socket on 35127
+2021-08-17T13:40:09.2728339Z [devops-project] $ java -cp /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven35-agent-1.13.jar:/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/maven38/boot/plexus-classworlds-2.6.0.jar:/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/maven38/conf/logging jenkins.maven3.agent.Maven35Main /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/maven38 /var/jenkins_home/war/WEB-INF/lib/remoting-4.7.jar /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar /var/jenkins_home/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.13.jar 35127
+2021-08-17T13:40:09.2730463Z <===[JENKINS REMOTING CAPACITY]===>���channel started
+2021-08-17T13:40:09.2730980Z Executing Maven:  -B -f /var/jenkins_home/workspace/devops-project/pom.xml install
+2021-08-17T13:40:09.2731276Z [INFO] Scanning for projects...
+2021-08-17T13:40:09.2731501Z [INFO] 
+2021-08-17T13:40:09.2731779Z [INFO] ------------< com.applaudostudios.interview:api-challenge >-------------
+2021-08-17T13:40:09.2732030Z [INFO] Building API Challenge 1.4.0
+2021-08-17T13:40:09.2732419Z [INFO] --------------------------------[ jar ]---------------------------------
+2021-08-17T13:40:09.2732858Z [INFO] 
+2021-08-17T13:40:09.2733309Z [INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ api-challenge ---
+2021-08-17T13:40:09.2733665Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2021-08-17T13:40:09.2734353Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+2021-08-17T13:40:09.2734959Z [INFO] Copying 1 resource
+2021-08-17T13:40:09.2735453Z [INFO] Copying 1 resource
+2021-08-17T13:40:09.2735548Z 
+2021-08-17T13:40:14.3257150Z [INFO] 
+2021-08-17T13:40:14.3257778Z [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ api-challenge ---
+2021-08-17T13:40:14.3258254Z [INFO] Nothing to compile - all classes are up to date
+2021-08-17T13:40:14.3258480Z [INFO] 
+2021-08-17T13:40:14.3258922Z [INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ api-challenge ---
+2021-08-17T13:40:14.3259285Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2021-08-17T13:40:14.3259585Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+2021-08-17T13:40:14.3259988Z [INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/devops-project/src/test/resources
+2021-08-17T13:40:14.3260525Z [INFO] 
+2021-08-17T13:40:14.3260860Z [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ api-challenge ---
+2021-08-17T13:40:14.3261180Z [INFO] No sources to compile
+2021-08-17T13:40:14.3261374Z [INFO] 
+2021-08-17T13:40:14.3261659Z [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ api-challenge ---
+2021-08-17T13:40:14.3262067Z [INFO] No tests to run.
+2021-08-17T13:40:14.3262457Z [JENKINS] Recording test results
+2021-08-17T13:40:14.3262700Z [INFO] 
+2021-08-17T13:40:14.3263068Z [INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ api-challenge ---
+2021-08-17T13:40:14.3263599Z [INFO] 
+2021-08-17T13:40:14.3264131Z [INFO] --- spring-boot-maven-plugin:2.4.0:repackage (repackage) @ api-challenge ---
+2021-08-17T13:40:14.3264815Z [INFO] Replacing main artifact with repackaged archive
+2021-08-17T13:40:14.3265257Z [INFO] 
+2021-08-17T13:40:14.3265858Z [INFO] --- maven-install-plugin:2.5.2:install (default-install) @ api-challenge ---
+2021-08-17T13:40:14.3266875Z [INFO] Installing /var/jenkins_home/workspace/devops-project/target/api-challenge-1.4.0.jar to /var/jenkins_home/.m2/repository/com/applaudostudios/interview/api-challenge/1.4.0/api-challenge-1.4.0.jar
+2021-08-17T13:40:14.3268006Z [INFO] Installing /var/jenkins_home/workspace/devops-project/pom.xml to /var/jenkins_home/.m2/repository/com/applaudostudios/interview/api-challenge/1.4.0/api-challenge-1.4.0.pom
+2021-08-17T13:40:14.3268623Z [INFO] ------------------------------------------------------------------------
+2021-08-17T13:40:14.3269581Z [INFO] BUILD SUCCESS
+2021-08-17T13:40:14.3269904Z [INFO] ------------------------------------------------------------------------
+2021-08-17T13:40:14.3270351Z [INFO] Total time:  4.557 s
+2021-08-17T13:40:14.3270954Z [INFO] Finished at: 2021-08-17T13:40:10Z
+2021-08-17T13:40:14.3272342Z [INFO] ------------------------------------------------------------------------
+2021-08-17T13:40:14.3272816Z Waiting for Jenkins to finish collecting data
+2021-08-17T13:40:14.3273324Z [JENKINS] Archiving /var/jenkins_home/workspace/devops-project/pom.xml to com.applaudostudios.interview/api-challenge/1.4.0/api-challenge-1.4.0.pom
+2021-08-17T13:40:14.3275041Z [JENKINS] Archiving /var/jenkins_home/workspace/devops-project/target/api-challenge-1.4.0.jar to com.applaudostudios.interview/api-challenge/1.4.0/api-challenge-1.4.0.jar
+2021-08-17T13:40:14.3275895Z channel stopped
+2021-08-17T13:40:14.3276865Z [devops-project] $ /var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/Scanner/bin/sonar-scanner scan -Dsonar.host.url=http://172.19.0.2:9000 -Dsonar.projectKey=devops-project -Dsonar.language=java -Dsonar.login=d3fdab433cf44aefa0641e5a9cf2eb125a3494af -Dsonar.exclusions=**/*.java -Dsonar.projectBaseDir=/var/jenkins_home/workspace/devops-project
+2021-08-17T13:40:14.3277934Z INFO: Scanner configuration file: /var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/Scanner/conf/sonar-scanner.properties
+2021-08-17T13:40:14.3278577Z INFO: Project root configuration file: NONE
+2021-08-17T13:40:14.3279086Z INFO: SonarScanner 4.6.2.2472
+2021-08-17T13:40:14.3279342Z INFO: Java 11.0.11 AdoptOpenJDK (64-bit)
+2021-08-17T13:40:14.3279603Z INFO: Linux 4.19.128-microsoft-standard amd64
+2021-08-17T13:40:14.3279892Z INFO: User cache: /var/jenkins_home/.sonar/cache
+2021-08-17T13:40:14.3280305Z INFO: Scanner configuration file: /var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/Scanner/conf/sonar-scanner.properties
+2021-08-17T13:40:14.3280704Z INFO: Project root configuration file: NONE
+2021-08-17T13:40:14.3280980Z INFO: Analyzing on SonarQube server 9.0.1
+2021-08-17T13:40:14.3281322Z INFO: Default locale: "en_US", source code encoding: "UTF-8" (analysis is platform dependent)
+2021-08-17T13:40:14.3281644Z INFO: Load global settings
+2021-08-17T13:40:14.3281949Z INFO: Load global settings (done) | time=74ms
+2021-08-17T13:40:14.3282268Z INFO: Server id: BF41A1F2-AXtUQBAuZcwe-mxKKIbx
+2021-08-17T13:40:14.3282791Z INFO: User cache: /var/jenkins_home/.sonar/cache
+2021-08-17T13:40:14.3283065Z INFO: Load/download plugins
+2021-08-17T13:40:14.3283383Z INFO: Load plugins index
+2021-08-17T13:40:14.3283773Z INFO: Load plugins index (done) | time=54ms
+2021-08-17T13:40:14.3284054Z INFO: Load/download plugins (done) | time=155ms
+2021-08-17T13:40:14.3284239Z 
+2021-08-17T13:40:19.3800955Z INFO: Process project properties
+2021-08-17T13:40:19.3801308Z INFO: Process project properties (done) | time=1ms
+2021-08-17T13:40:19.3801675Z INFO: Execute project builders
+2021-08-17T13:40:19.3802022Z INFO: Execute project builders (done) | time=2ms
+2021-08-17T13:40:19.3802274Z INFO: Project key: devops-project
+2021-08-17T13:40:19.3802569Z INFO: Base dir: /var/jenkins_home/workspace/devops-project
+2021-08-17T13:40:19.3802875Z INFO: Working dir: /var/jenkins_home/workspace/devops-project/.scannerwork
+2021-08-17T13:40:19.3803189Z INFO: Load project settings for component key: 'devops-project'
+2021-08-17T13:40:19.3803529Z INFO: Load project settings for component key: 'devops-project' (done) | time=23ms
+2021-08-17T13:40:19.3803838Z INFO: Auto-configuring with CI 'Jenkins'
+2021-08-17T13:40:19.3804059Z INFO: Load quality profiles
+2021-08-17T13:40:19.3804288Z INFO: Load quality profiles (done) | time=59ms
+2021-08-17T13:40:19.3804528Z INFO: Auto-configuring with CI 'Jenkins'
+2021-08-17T13:40:19.3804794Z INFO: Load active rules
+2021-08-17T13:40:19.3805011Z INFO: Load active rules (done) | time=1746ms
+2021-08-17T13:40:19.3805230Z INFO: Indexing files...
+2021-08-17T13:40:19.3805435Z INFO: Project configuration:
+2021-08-17T13:40:19.3805682Z INFO:   Excluded sources: **/*.java
+2021-08-17T13:40:19.3805911Z INFO: 6 files indexed
+2021-08-17T13:40:19.3806150Z INFO: 17 files ignored because of inclusion/exclusion patterns
+2021-08-17T13:40:19.3806424Z INFO: 25 files ignored because of scm ignore settings
+2021-08-17T13:40:19.3806676Z INFO: Quality profile for xml: Sonar way
+2021-08-17T13:40:19.3806971Z INFO: ------------- Run sensors on module devops-project
+2021-08-17T13:40:19.3807208Z INFO: Load metrics repository
+2021-08-17T13:40:19.3807445Z INFO: Load metrics repository (done) | time=25ms
+2021-08-17T13:40:19.3807680Z INFO: Sensor CSS Rules [cssfamily]
+2021-08-17T13:40:19.3808203Z INFO: No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+2021-08-17T13:40:19.3808525Z INFO: Sensor CSS Rules [cssfamily] (done) | time=2ms
+2021-08-17T13:40:19.3808778Z INFO: Sensor JaCoCo XML Report Importer [jacoco]
+2021-08-17T13:40:19.3809434Z INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+2021-08-17T13:40:19.3810417Z INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+2021-08-17T13:40:19.3811117Z INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=5ms
+2021-08-17T13:40:19.3811512Z INFO: Sensor C# Project Type Information [csharp]
+2021-08-17T13:40:19.3811769Z INFO: Sensor C# Project Type Information [csharp] (done) | time=1ms
+2021-08-17T13:40:19.3812636Z INFO: Sensor C# Properties [csharp]
+2021-08-17T13:40:19.3812863Z INFO: Sensor C# Properties [csharp] (done) | time=2ms
+2021-08-17T13:40:19.3813079Z INFO: Sensor JavaXmlSensor [java]
+2021-08-17T13:40:19.3813289Z INFO: 2 source files to be analyzed
+2021-08-17T13:40:19.3813486Z INFO: Load project repositories
+2021-08-17T13:40:19.3813703Z INFO: Load project repositories (done) | time=20ms
+2021-08-17T13:40:19.3813927Z INFO: 2/2 source files have been analyzed
+2021-08-17T13:40:19.3814218Z INFO: Sensor JavaXmlSensor [java] (done) | time=258ms
+2021-08-17T13:40:19.3814805Z INFO: Sensor HTML [web]
+2021-08-17T13:40:19.3815020Z INFO: Sensor HTML [web] (done) | time=3ms
+2021-08-17T13:40:19.3815226Z INFO: Sensor XML Sensor [xml]
+2021-08-17T13:40:19.3815419Z INFO: 2 source files to be analyzed
+2021-08-17T13:40:19.3815630Z INFO: 2/2 source files have been analyzed
+2021-08-17T13:40:19.3815852Z INFO: Sensor XML Sensor [xml] (done) | time=229ms
+2021-08-17T13:40:19.3816096Z INFO: Sensor VB.NET Project Type Information [vbnet]
+2021-08-17T13:40:19.3816356Z INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=1ms
+2021-08-17T13:40:19.3816596Z INFO: Sensor VB.NET Properties [vbnet]
+2021-08-17T13:40:19.3816831Z INFO: Sensor VB.NET Properties [vbnet] (done) | time=1ms
+2021-08-17T13:40:19.3817061Z INFO: ------------- Run sensors on project
+2021-08-17T13:40:19.3817269Z INFO: Sensor Zero Coverage Sensor
+2021-08-17T13:40:19.3817485Z INFO: Sensor Zero Coverage Sensor (done) | time=1ms
+2021-08-17T13:40:19.3817716Z INFO: CPD Executor Calculating CPD for 0 files
+2021-08-17T13:40:19.3817959Z INFO: CPD Executor CPD calculation finished (done) | time=0ms
+2021-08-17T13:40:19.3818212Z INFO: Analysis report generated in 75ms, dir size=106.9 kB
+2021-08-17T13:40:19.3818465Z INFO: Analysis report compressed in 21ms, zip size=16.4 kB
+2021-08-17T13:40:19.3818690Z INFO: Analysis report uploaded in 20ms
+2021-08-17T13:40:19.3818994Z INFO: ANALYSIS SUCCESSFUL, you can browse http://172.19.0.2:9000/dashboard?id=devops-project
+2021-08-17T13:40:19.3819516Z INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+2021-08-17T13:40:19.3819965Z INFO: More about the report processing at http://172.19.0.2:9000/api/ce/task?id=AXtUV1ygZcwe-mxKKNSA
+2021-08-17T13:40:19.3820287Z INFO: Analysis total time: 4.426 s
+2021-08-17T13:40:19.3820548Z INFO: ------------------------------------------------------------------------
+2021-08-17T13:40:19.3820888Z INFO: EXECUTION SUCCESS
+2021-08-17T13:40:19.3821135Z INFO: ------------------------------------------------------------------------
+2021-08-17T13:40:19.3821375Z INFO: Total time: 5.665s
+2021-08-17T13:40:19.3821575Z INFO: Final Memory: 12M/57M
+2021-08-17T13:40:19.3821853Z INFO: ------------------------------------------------------------------------
+2021-08-17T13:40:19.3822091Z Finished: SUCCESS
+2021-08-17T13:40:19.3822179Z 
+2021-08-17T13:40:19.5069988Z ******************************************************************************
+2021-08-17T13:40:19.5070429Z Jenkins job finished: devops-project
+2021-08-17T13:40:19.5071224Z http://localhost:8080/job/devops-project/3 
+2021-08-17T13:40:19.5071764Z ******************************************************************************
+2021-08-17T13:40:19.6107897Z ##[section]Finishing: JenkinsQueueJob
+2021-08-17T13:40:19.6126409Z ##[section]Starting: Run a multi-line script
+2021-08-17T13:40:19.6266889Z ==============================================================================
+2021-08-17T13:40:19.6267454Z Task         : Command line
+2021-08-17T13:40:19.6267693Z Description  : Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+2021-08-17T13:40:19.6268338Z Version      : 2.182.0
+2021-08-17T13:40:19.6268592Z Author       : Microsoft Corporation
+2021-08-17T13:40:19.6268993Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line
+2021-08-17T13:40:19.6270058Z ==============================================================================
+2021-08-17T13:40:20.5966357Z Generating script.
+2021-08-17T13:40:20.7053919Z ========================== Starting Command Output ===========================
+2021-08-17T13:40:20.7420770Z ##[command]"C:\WINDOWS\system32\cmd.exe" /D /E:ON /V:OFF /S /C "CALL "C:\agent\a1\_work\_temp\fdcfbb63-68ee-47ee-b39e-6c1fcec8086c.cmd""
+2021-08-17T13:40:20.7706326Z Add other tasks to build, test, and deploy your project.
+2021-08-17T13:40:20.7709635Z See https://aka.ms/yaml
+2021-08-17T13:40:20.8041492Z ##[section]Finishing: Run a multi-line script
+2021-08-17T13:40:20.8083223Z ##[section]Starting: Checkout DevOps Project@master to s
+2021-08-17T13:40:20.8277954Z ==============================================================================
+2021-08-17T13:40:20.8278635Z Task         : Get sources
+2021-08-17T13:40:20.8279321Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2021-08-17T13:40:20.8280059Z Version      : 1.0.0
+2021-08-17T13:40:20.8280557Z Author       : Microsoft
+2021-08-17T13:40:20.8281222Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2021-08-17T13:40:20.8281931Z ==============================================================================
+2021-08-17T13:40:21.2441962Z Cleaning any cached credential from repository: DevOps Project (Git)
+2021-08-17T13:40:21.2511772Z ##[section]Finishing: Checkout DevOps Project@master to s
+2021-08-17T13:40:21.2556489Z ##[section]Starting: Finalize Job
+2021-08-17T13:40:21.2581127Z Cleaning up task key
+2021-08-17T13:40:21.2582969Z Start cleaning up orphan processes.
+2021-08-17T13:40:21.2671212Z ##[section]Finishing: Finalize Job
+2021-08-17T13:40:21.2706684Z ##[section]Finishing: Job
